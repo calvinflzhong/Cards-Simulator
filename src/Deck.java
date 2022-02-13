@@ -1,7 +1,9 @@
 import java.util.Arrays;
 
-public class Deck extends Cards{
-    public void create(){
+public class Deck {
+    Card[] card;
+    
+    public void createDeck(){
         card = new Card[52];
         for(int i=0; i<52; i++){
             String s="error";
@@ -54,10 +56,15 @@ public class Deck extends Cards{
             card[index2]=tempCard;
         }
     }
+
+    public Card[] getCards(){
+        return card;
+    }
+
     
     public void showCards(){
         for(int i=0; i<card.length; i++){
-            System.out.print(card[i]);
+            System.out.print("Card " + (i+1) + card[i]);
         }
     }
     

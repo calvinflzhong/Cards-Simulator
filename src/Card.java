@@ -1,6 +1,7 @@
 public class Card implements Comparable<Card> {
-    String suit;
-    String rank;
+    private String suit;
+    private String rank;
+    
 
     public Card(String suit, String rank) {
         this.suit = suit;
@@ -9,10 +10,10 @@ public class Card implements Comparable<Card> {
 
     @Override
     public String toString() {
-        return "Card{" +
+        return "{" +
                 "suit='" + suit + '\'' +
                 ", rank='" + rank + '\'' +
-                '}';
+                "} ";
     }
     
     public int compareTo(Card card){
