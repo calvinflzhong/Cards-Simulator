@@ -10,7 +10,7 @@ public class TestCards {
                 "\nExit:                                                                0" +
                 "\nGenerate deck of cards ordered from smallest to biggest and display: 1" +
                 "\nGenerate random deck of cards and display:                           2" +
-                "\nChoose your operation: ");
+                "\nChoose your option: ");
             
         userOption = input.nextInt();
             switch (userOption) {
@@ -30,7 +30,7 @@ public class TestCards {
                         "\nExit:                                                                0" +
                         "\nShuffle deck of cards and display:                                   1" +
                         "\nSort deck of cards and display:                                      2" +
-                        "\nChoose your operation: ");
+                        "\nChoose your option: ");
 
                 userOption = input.nextInt();
                 if(userOption==0)
