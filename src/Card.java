@@ -2,12 +2,13 @@ public class Card implements Comparable<Card> {
     private String suit;
     private String rank;
     
-
+    //Create all args constructor
     public Card(String suit, String rank) {
         this.suit = suit;
         this.rank = rank;
     }
-
+    
+    //Override toString method to be used when printing cards in Deck class
     @Override
     public String toString() {
         return "{" +
@@ -16,10 +17,12 @@ public class Card implements Comparable<Card> {
                 "} ";
     }
     
+    //Overriding compareTo method in order to sort cards in Deck class
     public int compareTo(Card card){
         int cardValue1=0;
         int cardValue2=0;
         
+        //Assign values to each card by giving each suit and rank a value
         switch(suit){
             case "♣": cardValue1=0; break;
             case "♦": cardValue1=13; break;
@@ -62,6 +65,8 @@ public class Card implements Comparable<Card> {
             case "K": cardValue2+=12; break;
             case "A": cardValue2+=13; break;
         }
+        
+        //Compare values of cards using assigned values
         if (cardValue1<cardValue2){
             return -1;
         }else if(cardValue1>cardValue2){
